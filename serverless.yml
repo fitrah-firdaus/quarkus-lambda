@@ -1,0 +1,14 @@
+service: quarkus-lambda-service
+
+provider:
+  name: aws
+  region: ap-southeast-1
+
+package:
+  artifact: target/quarkus-lambda-1.0-SNAPSHOT-runner.jar
+
+functions:
+  hello:
+    handler: org.acme.lambda.HelloLambda
+    runtime: java8
+    memorySize: 1024
